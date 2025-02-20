@@ -1,1 +1,19 @@
+# File categorization rules
+categories:
+  documents:
+    extensions: [.pdf, .docx, .txt, .md]
+    structure: by_year
+  images:
+    extensions: [.jpg, .jpeg, .png, .gif, .svg]
+    structure: by_month
+  audio:
+    extensions: [.mp3, .wav, .flac]
+    structure: flat
+  archives:
+    extensions: [.zip, .tar, .gz]
+    structure: flat
 
+# Conflict resolution rules
+conflict:
+  resolution: rename
+  pattern: "{name}_conflict_{timestamp}{ext}"
